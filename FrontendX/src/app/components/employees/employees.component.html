@@ -1,0 +1,75 @@
+<app-header></app-header>
+
+<div align="center">
+  <img style="width:30% " src="https://sv1.picz.in.th/images/2022/03/18/rm3MF0.png" />
+
+</div>
+
+<div class="text-center">
+
+    <button class="btn btn-success"
+    [routerLink]="['/create/employee']" [routerLinkActive]="'active'"
+    >Create Employee</button><br>
+   
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container">
+<div class="row">
+	<div class="col-lg-12">
+		<div class="main-box clearfix">
+			<div class="table-responsive">
+
+				<table class="table user-list">
+					<thead>
+						<tr>
+							<th><span>id</span></th>
+							<th><span>firstName</span></th>
+							<th><span>lastName</span></th>
+              <th><span>gender</span></th>
+							<th><span>email</span></th>
+              <th><span>phoneNumber</span></th>
+              <th><span>salary</span></th>
+              <th><span>action</span></th>
+							<th>&nbsp;</th>
+						</tr>
+					</thead>
+          
+					<tbody>
+
+            <tr *ngFor="let employee of employees">
+
+              <td>{{ employee.id }}</td>  
+              <td>{{ employee.firstName }}</td>
+              <td>{{ employee.lastName }}</td>
+              <td>{{ employee.gender }}</td>
+              <td>{{ employee.email }}</td>
+              <td>{{ employee.phoneNumber }}</td>
+              <td>{{ employee.salary }}</td>
+  
+              <td>
+  
+               <button class="btn btn-warning"
+               (click)="onEdit(employee.id)" >Edit</button>&nbsp;
+  
+               
+               <button class="btn btn-info"
+               (click)="onDetail(employee.id)" >Details</button>&nbsp;
+  
+               <button class="btn btn-danger"
+               (click)="deleteEmployee(employee.id)">Delete</button>
+              
+  
+             
+
+              </td>
+              
+            </tr>
+
+					</tbody>
+				</table>
+			</div>
+
+
+		</div>
+	</div>
+</div>
+</div>

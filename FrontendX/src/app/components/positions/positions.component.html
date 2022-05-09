@@ -1,0 +1,73 @@
+<app-header></app-header>
+
+<div align="center">
+  <img style="width:30% " src="https://sv1.picz.in.th/images/2022/05/03/HS8yNt.jpg" />
+
+</div><br>
+
+<form [formGroup]="createPositionFormGroup" class="form-card" (ngSubmit)="onSubmit()">
+
+		<div align ="center">
+			<div class="form-group col-sm-6 flex-column d-flex">
+				<input id="inputPosition" type="text" 
+				placeholder="Position" required="" autofocus="" formControlName="position"><br>
+
+				<td>
+					<button type="submit" class="btn btn-success btn-block" [disabled]="createPositionFormGroup.invalid" >Save</button>&nbsp;
+						<button type="reset" class="btn btn-secondary">Cancel</button>
+				</td>
+			
+			</div>
+		</div>
+
+			
+			
+			<br>
+		
+</form>
+
+<div class="col-lg-12">
+
+    <div class="text-center">
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container">
+<div class="row">
+	<div class="col-lg-12">
+		<div class="main-box clearfix">
+			<div class="table-responsive">
+
+				<table class="table user-list">
+					<thead>
+						<tr>
+							<th><span>id</span></th>
+							<th><span>position</span></th>
+                           <th><span>action</span></th>
+							<th>&nbsp;</th>
+						</tr>
+					</thead>
+          
+					<tbody>
+
+            <tr *ngFor="let position of positions">
+
+              <td>{{ position.id }}</td>  
+              <td>{{ position.position }}</td>
+    
+              <td>
+
+				<button class="btn btn-danger"
+				(click)="deletePosition(position.id)">Delete</button>
+              
+              </td>
+              
+            </tr>
+
+					</tbody>
+				</table>
+			</div>
+
+		</div>
+	</div>
+</div>
+</div>

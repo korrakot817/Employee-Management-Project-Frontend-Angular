@@ -1,0 +1,50 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <img src="http://localhost:4200/assets/Files-Upload/LOGO.png" alt="" width="30" height="24">
+    <a class="navbar-brand">Rhamty</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page"
+           [routerLink]="['/dashboard']" [routerLinkActive]="'active'">{{'header.menu.dashboard' | translate}}</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/employees']" [routerLinkActive]="'active'">{{'header.menu.employees' | translate}}</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/positions']" [routerLinkActive]="'active'">{{'header.menu.positions' | translate}}</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/chat']" [routerLinkActive]="'active'">{{'header.menu.chat' | translate}}</a>
+        </li>
+
+      </ul>
+    
+      <ul class="navbar-nav mb-2 mb-lg-0 d-flex">
+        <li class="nav-item">
+          <a class="nav-link " aria-current="page" (click)="switchToThai()">TH</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " aria-current="page" (click)="switchToEnglish()">EN</a>
+        </li>
+
+          <li class="nav-item">
+              <button class="btn btn-danger"  aria-current="page" (click)="doLogout()">{{'header.menu.logout' | translate}}</button>
+            </li>
+
+
+
+        </ul>
+    </div>
+  </div>
+</nav>

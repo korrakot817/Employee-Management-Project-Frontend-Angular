@@ -1,0 +1,65 @@
+<div class="container-fluid px-1 py-5 mx-auto">
+    <div class="row d-flex justify-content-center">
+        <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
+            <h3>Create New Employee</h3>
+            <p class="blue-text">Welcome new employee<br>work hard to hard level</p>
+            <div class="card">
+                
+                <form [formGroup]="createEmployeeFormGroup" class="form-card" (ngSubmit)="onSubmit()"> 
+
+
+                    <div class="row justify-content-between text-left">
+                        <div class="form-group col-sm-6 flex-column d-flex">
+                            <input id="inputFistName" type="text" placeholder="FirstName" required="" autofocus="" formControlName="gender"> </div>
+                        <div class="form-group col-sm-6 flex-column d-flex"> 
+                            <input id="input:LastName" type="text" placeholder="LastName" required="" autofocus="" formControlName="email"> </div>
+                    </div>
+                    
+                    <div class="row justify-content-between text-left">
+                        <div class="form-group col-sm-6 flex-column d-flex">
+                            <input id="inputGender" type="text" placeholder="Gender" required="" autofocus="" formControlName="firstName"> </div>
+                        <div class="form-group col-sm-6 flex-column d-flex"> 
+                            <input id="inputEmail" type="email" placeholder="Email" required="" autofocus="" formControlName="lastName"> </div>
+                    </div>
+                    
+                    <div class="row justify-content-between text-left">
+                        <div class="form-group col-sm-6 flex-column d-flex">
+                            <input id="inputPhoneNumber" type="number" placeholder="PhoneNumber" required="" autofocus="" formControlName="phoneNumber"> </div>
+                        <div class="form-group col-sm-6 flex-column d-flex"> 
+                            <input id="inputSalary" type="number" placeholder="Salary" required="" autofocus="" formControlName="salary"> </div>
+                    </div>
+
+                    <div class="row justify-content-between text-left">
+                        <div class="form-group col-sm-6 flex-column d-flex">
+                            <input id="inputStreet" type="text" placeholder="Street" required="" autofocus="" formControlName="street"> </div>
+                        <div class="form-group col-sm-6 flex-column d-flex">
+                            <input id="inputCity" type="text" placeholder="City" required="" autofocus="" formControlName="city"> </div>
+                    </div>
+
+                     <div class="row justify-content-between text-left">
+                        <div class="form-group col-sm-6 flex-column d-flex">
+                            <input id="inputState" type="text" placeholder="State" required="" autofocus="" formControlName="state"> </div>
+                        <div class="form-group col-sm-6 flex-column d-flex">
+                            <input id="inputZipcode" type="number" placeholder="Zipcode" required="" autofocus="" formControlName="zipcode"> </div>
+                    </div><br>
+
+                    <div class="row justify-content-between text-left">
+                        <div class="form-group col-sm-6 flex-column d-flex">
+                            
+                            <select formControlName="position">
+                                <option *ngFor="let position of positions" value="{{position.id}}">
+                                    {{position.position}}
+
+                                </option>
+                            </select>
+                        </div>
+                    </div><br>
+                
+                    <button type="submit" class="btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm" [disabled]="createEmployeeFormGroup.invalid" >Save</button>&nbsp;
+                                <button type="reset" class="btn btn-danger btn-block text-uppercase mb-2 rounded-pill shadow-sm"
+                                [routerLink]="['/employees']" [routerLinkActive]="'active'" >Cancel</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

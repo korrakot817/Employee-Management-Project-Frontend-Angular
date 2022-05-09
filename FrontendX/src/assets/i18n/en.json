@@ -1,0 +1,23 @@
+{
+    "Test.message":"test message",
+
+    "header":{
+        "menu": {
+            "dashboard": "Dashboard",
+            "employees": "Employees",
+            "positions": "positions",
+            "chat": "Chat",
+            "logout": "Logout" 
+
+        }
+    },
+
+    "user":{
+        "activate":{
+            "already": "Your account is already activated.",
+            "token": {
+                "expired": "Your token is expired."
+            }
+        }
+    }
+}

@@ -1,0 +1,51 @@
+
+<app-header></app-header>
+
+<div class="card my-5">
+    <div class="card-body">
+
+          <div class="topnav">
+            <input type="text" placeholder="Search..">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </div>
+
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+          <tr>
+
+            <th scope="col">id</th>
+            <th scope="col">email</th>
+            <th scope="col">firstName</th>
+            <th scope="col">lastName</th>
+            <th scope="col">activated</th>
+            <th scope="col">action</th>
+
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr *ngFor="let user of users">
+
+            <td>{{ user.id }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.firstName }}</td>
+            <td>{{ user.lastName }}</td>
+            <td>{{ user.activated }}</td>
+
+            <td>
+
+             <button class="btn btn-warning"
+             (click)="onEdit(user.id)" >Edit</button>&nbsp;
+
+             <button class="btn btn-danger"
+             (click)="deleteById(user.id)">Delete</button>
+            
+
+            </td>
+            
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+

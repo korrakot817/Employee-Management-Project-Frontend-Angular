@@ -1,0 +1,27 @@
+{
+    "Test.message":"ข้อความทดสอบ",
+
+    "header":{
+        "menu": {
+            "dashboard": "หน้าแรก",
+            "employees": "พนักงาน",
+            "positions": "ตำแหน่งงาน",
+            "chat": "แชท",
+            "logout": "ออกจากระบบ" 
+
+        }
+
+    },
+
+    "user":{
+        "activate":{
+            "already": "บัญชีของคุณเปิดใช้งานอยู่แล้ว",
+            "token": {
+                "expired": "Token หมดอายุ"
+            }
+        }
+    }
+}
+
+
+

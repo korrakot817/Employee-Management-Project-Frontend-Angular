@@ -1,0 +1,20 @@
+<div class="frame">
+	<div class="center">
+		<div class="title">
+			<h1>Drop your image to upload</h1>
+		</div>
+
+		<div class="dropzone">
+			    <img src="http://100dayscss.com/codepen/upload.svg" class="upload-icon" />
+		</div>	
+
+		<input  type="file" multiple [(ngModel)]="img_file_input"(change)="detectFiles($event)">
+
+
+		<button  (click)="onSubmit()" type="submit" class="btn" name="uploadbutton">Upload file</button>
+		<button   class="btn" type="reset"  [routerLink]="['/employees']" [routerLinkActive]="'active'" >Cancel</button>
+
+
+	</div>
+</div>
+

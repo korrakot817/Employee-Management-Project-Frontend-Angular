@@ -1,0 +1,40 @@
+<div class="container-fluid">
+    <div class="row no-gutter">
+        <!-- The image half -->
+        <div class="col-md-6 d-none d-md-flex bg-image"></div>
+
+
+        <!-- The content half -->
+        <div class="col-md-6 bg-light">
+            <div class="login d-flex align-items-center py-5">
+
+                <!-- Demo content-->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-10 col-xl-7 mx-auto">
+                            <h3 class="display-4">Edit User</h3>
+                    
+                            <form [formGroup]="editFormGroup" class="d-grid gap-2 col-6 m-auto" (ngSubmit)="onSubmit()">
+                                
+                                <div class="form-group mb-3">
+                                    <input value="{{firstName}}" id="inputFistName" type="text" placeholder="FirstName" required="" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4" formControlName="firstName">
+                                </div>
+                                
+                                <div class="form-group mb-3">
+                                    <input value="{{lastName}}" id="inputLastName" type="text" placeholder="LastName" required="" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4" formControlName="lastName">
+                                </div>
+
+                                <button type="submit" class="btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm" [disabled]="editFormGroup.invalid" >Save</button>
+                                <button type="reset" class="btn btn-danger btn-block text-uppercase mb-2 rounded-pill shadow-sm"
+                                [routerLink]="['/users']" [routerLinkActive]="'active'" >Cancel</button>
+                                
+                            </form>
+                        </div>
+                    </div>
+                </div><!-- End -->
+
+            </div>
+        </div><!-- End -->
+
+    </div>
+</div>
